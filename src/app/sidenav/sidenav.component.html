@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+   <!-- <mat-toolbar>Menu</mat-toolbar> -->
+    <mat-nav-list>
+        <a mat-list-item href="#"><mat-icon mat-list-item>home</mat-icon></a>
+      <a mat-list-item href="#" [matMenuTriggerFor]="appMenu">Linux</a>
+      <a mat-list-item href="#">MacOS</a>
+      <a mat-list-item href="#">Windows</a>
+      <a mat-list-item href="#">BSD</a>
+      <a mat-list-item href="#">Other</a>
+    </mat-nav-list>
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Debian</button>
+        <button mat-menu-item>Slackware</button>
+        <button mat-menu-item>Arch</button>
+        <button mat-menu-item>Redhat</button>
+        <button mat-menu-item>other</button>
+        <button mat-menu-item>Don`t know</button>
+    </mat-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>OSarchive</span>
+    </mat-toolbar>
+  </mat-sidenav-content>
