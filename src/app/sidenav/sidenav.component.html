@@ -11,6 +11,7 @@
       <a mat-list-item href="#">MacOS</a>
       <a mat-list-item href="#">Windows</a>
       <a mat-list-item href="#">BSD</a>
+      <a mat-list-item [matMenuTriggerFor]="mv">Mobile</a>
       <a mat-list-item href="#">Other</a>
     </mat-nav-list>
     <mat-menu #appMenu="matMenu">
@@ -18,9 +19,38 @@
         <button mat-menu-item>Slackware</button>
         <button mat-menu-item>Arch</button>
         <button mat-menu-item>Redhat</button>
+        <button mat-menu-item>Chrome/ChromiumOS</button>
         <button mat-menu-item>other</button>
         <button mat-menu-item>Don`t know</button>
     </mat-menu>
+    <mat-menu #mv="matMenu">
+      <button mat-menu-item>AOSP</button>
+      <button mat-menu-item>IOS</button>
+      <button mat-menu-item>WatchOS</button>
+      <button mat-menu-item>TVOS</button>
+      <button mat-menu-item>ipadOS</button>
+      <button mat-menu-item>EMUI</button>
+      <button mat-menu-item>magicUI</button>
+      <button mat-menu-item>MIUI</button>
+      <button mat-menu-item>ZUI</button>
+      <button mat-menu-item>UMIDIGI</button>
+      <button mat-menu-item>FuntouchOS</button>
+      <button mat-menu-item>Galaxy(old)</button>
+      <button mat-menu-item>OneUI</button>
+      <button mat-menu-item>Blackberry</button>
+      <button mat-menu-item>XPERIA</button>
+      <button mat-menu-item>HTC</button>
+      <button mat-menu-item>Kindle</button>
+      <button mat-menu-item>Tizen</button>
+      <button mat-menu-item>LG</button>
+      <button mat-menu-item>ZenUI</button>
+      <button mat-menu-item>Oxygen/Hydrogen</button>
+      <button mat-menu-item>CydragenMod/Linage</button>
+      <button mat-menu-item>ColorOS</button>
+      <button mat-menu-item>Flyme</button>
+      <button mat-menu-item>Don`t know</button>
+      <button mat-menu-item>Other</button>
+  </mat-menu> 
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
